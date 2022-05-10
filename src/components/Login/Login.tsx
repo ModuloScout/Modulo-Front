@@ -2,10 +2,12 @@ import React from "react"
 import {Field, Form, Formik} from "formik"
 import {Button, Form as FormBootstrap} from "react-bootstrap"
 import {Link} from "react-router-dom";
+import NavBar from "../Utils/Navbar";
 
 export default function Login() {
     return (
         <>
+            <NavBar/>
             <div className="limited-container flex flex--vertical-around">
                 <div className="login-block">
                     <h1>Bienvenue sur Modulo</h1>

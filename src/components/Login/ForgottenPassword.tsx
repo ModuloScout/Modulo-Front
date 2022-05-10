@@ -2,10 +2,12 @@ import React from "react"
 import {Button, Form as FormBootstrap} from "react-bootstrap"
 import {Field, Form, Formik} from "formik"
 import {Link} from "react-router-dom"
+import NavBar from "../Utils/Navbar";
 
 export default function ForgottenPassword() {
     return (
         <>
+            <NavBar/>
             <div className="limited-container flex flex--vertical-around">
                 <div className="login-block">
                     <h1>Mot de passe oublié</h1>
