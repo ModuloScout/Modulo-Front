@@ -6,8 +6,9 @@ import Login from "./components/Login/Login"
 import ForgottenPassword from "./components/Login/ForgottenPassword"
 import Help from "./components/Footer/Help"
 import AboutUs from "./components/Footer/AboutUs"
-import Cookies from "./components/Footer/Cookies"
 import Mentions from "./components/Footer/Mentions"
+import ChoiceScope from "./components/Scope/ChoiceScope";
+import GestionCookies from "./components/Footer/GestionCookies";
 
 export default function App() {
     return (
@@ -17,9 +18,10 @@ export default function App() {
                 <Route path={"/login"} element={<Login/>}/>
                 <Route path={"/help"} element={<Help/>}/>
                 <Route path={"/aboutUs"} element={<AboutUs/>}/>
-                <Route path={"/cookies"} element={<Cookies/>}/>
+                <Route path={"/cookies"} element={<GestionCookies/>}/>
                 <Route path={"/mentions"} element={<Mentions/>}/>
                 <Route path={"/forgottenPassword"} element={<ForgottenPassword/>}/>
+                <Route path={"/choiceScope"} element={<ChoiceScope/>}/>
             </Routes>
             <footer>
                 <div>

@@ -25,11 +25,6 @@ export default function ForgottenPassword() {
                                        value={values.email}
                                 />
                                 <FormBootstrap.Label>Mot de passe :</FormBootstrap.Label>
-                                <Field className="form-field"
-                                       type="password"
-                                       name="password"
-                                       value={values.password}
-                                />
                                 <Button variant="success" type="submit" disabled={isSubmitting}>
                                     Envoyer votre demande
                                 </Button>

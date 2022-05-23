@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from "../Utils/Navbar";
 
-export default function Cookies() {
+export default function GestionCookies() {
     return (
         <>
             <NavBar/>
