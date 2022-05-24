@@ -1,0 +1,13 @@
+.submit {
+    color: mediumblue;
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    padding: .5rem;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+
+    &:hover {
+        color: white;
+        background-color: mediumblue;
+    }
+}
