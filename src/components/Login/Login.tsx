@@ -4,10 +4,14 @@ import {Button, Form as FormBootstrap} from "react-bootstrap"
 import {Link, useNavigate} from "react-router-dom";
 import NavBar from "../Utils/Navbar";
 import Cookies from "js-cookie";
+import {useDispatch} from "react-redux";
+import {setUuidData} from "../feature/uuidSlice";
 
 export default function Login() {
 
-    const COOKIE_NAME = 'MODULO'
+    const dispatch = useDispatch()
+
+    const COOKIE_NAME = 'MODULO_TOKEN_ACCESS'
     const saveToken = (token: string) => Cookies.set(COOKIE_NAME, token)
     const navigate = useNavigate()
 
@@ -27,9 +31,14 @@ export default function Login() {
         })
             .then(response => response.json())
             .then(
-                data => saveToken(data.token),
-            ).then(() => navigate('/choiceScope')
-        )
+                data => {
+                    saveToken(data.token)
+                    dispatch(setUuidData(data.uuid))
+                }
+            )
+            .then(
+                () => navigate('/choiceScope')
+            )
     }
 
     return (
