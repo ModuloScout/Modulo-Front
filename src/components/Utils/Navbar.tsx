@@ -17,7 +17,7 @@ export default function NavBar() {
                             <Nav className="me-auto">
                                 <Nav.Link as={Link} to={"/"}>Accueil</Nav.Link>
                                 {token &&
-                                    <Nav.Link as={Link} to={"/"}>Agenda</Nav.Link>
+                                    <Nav.Link as={Link} to={"/agenda"}>Agenda</Nav.Link>
                                 }
                             </Nav>
                             <Nav>

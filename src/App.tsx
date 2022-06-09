@@ -9,6 +9,7 @@ import AboutUs from "./components/Footer/AboutUs"
 import Mentions from "./components/Footer/Mentions"
 import ChoiceScope from "./components/Scope/ChoiceScope";
 import GestionCookies from "./components/Footer/GestionCookies";
+import Agenda from "./components/Agenda/agenda";
 
 export default function App() {
     return (
@@ -22,6 +23,7 @@ export default function App() {
                 <Route path={"/mentions"} element={<Mentions/>}/>
                 <Route path={"/forgottenPassword"} element={<ForgottenPassword/>}/>
                 <Route path={"/choiceScope"} element={<ChoiceScope/>}/>
+                <Route path={"/agenda"} element={<Agenda/>}/>
             </Routes>
             <footer>
                 <div>
