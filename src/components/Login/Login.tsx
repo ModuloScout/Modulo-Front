@@ -21,6 +21,7 @@ export default function Login() {
     }
 
     const onSubmit = async (values: any) => {
+        dispatch(setUuidData(values.uuid))
         fetch(`https://localhost:8000/api/auth-token`, {
             method: 'POST',
             headers: {
@@ -33,7 +34,6 @@ export default function Login() {
             .then(
                 data => {
                     saveToken(data.token)
-                    dispatch(setUuidData(data.uuid))
                 }
             )
             .then(

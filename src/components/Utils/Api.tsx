@@ -9,7 +9,6 @@ export const clearToken = () => Cookies.remove(COOKIE_NAME)
 
 export let fetchJSONWithToken = (url: string, options = {}) => {
     const token = retrieveToken()
-
     let optionsWithToken = options
     if (token != null) {
         optionsWithToken = merge({}, options, {
